@@ -1,0 +1,73 @@
+﻿<section id="contact" class="s-contact target-section">
+
+    <div class="overlay"></div>
+
+    <div class="row narrow section-intro">
+        <div class="col-full">
+            <h3>İletişim</h3>
+            <h1>@ViewBag.title</h1>
+
+            <p class="lead">@ViewBag.Description</p>
+        </div>
+    </div>
+
+    <div class="row contact__main">
+        <div class="col-eight tab-full contact__form">
+            <form @* id="contactForm" *@ method="POST" action="https://formspree.io/f/mvgryjdz">
+
+            @* <form name="contactForm" id="contactForm" method="post" action=""> *@
+                <fieldset>
+                    <div class="form-field">
+                        <input name="name" type="text" id="contactName" placeholder="Adınız" required class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="email" type="email" id="contactEmail" placeholder="Email" required class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="subject" type="text" id="contactSubject" placeholder="Konu" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="message" id="contactMessage" placeholder="Mesajınız" rows="10" required class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button type="submit" class="full-width btn--primary">Gönder</button>
+                    </div>
+                </fieldset>
+            </form>
+
+            <!-- contact-warning -->
+            <div class="message-warning">
+                Something went wrong. Please try again.
+            </div>
+
+            <!-- contact-success -->
+            <div class="message-success">
+                Your message was sent, thank you!<br>
+            </div>
+
+        </div>
+        <div class="col-four tab-full contact__infos">
+            <h4 class="h06">Phone</h4>
+            <p>
+                Phone: @ViewBag.Phone<br>
+                @* Mobile: (+63) 555 0100<br>
+                 Fax: (+63) 555 0101  *@
+            </p>
+
+            <h4 class="h06">Email</h4>
+            <p>
+                @ViewBag.Email<br>
+                @* info@holawebsite.com *@
+            </p>
+
+            <h4 class="h06">Address</h4>
+            <p>
+                @ViewBag.Address<br>
+                @* Mountain View, CA<br>
+                94043 US *@
+            </p>
+        </div>
+
+    </div>
+
+</section> 
